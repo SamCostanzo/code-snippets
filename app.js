@@ -33,7 +33,7 @@ function isEmpty(object) {
     return Object.keys(object).length === 0;
 }
   
-// Checks whether a value is a number.
+// Checks whether a value is a number
 function isNumber(value) {
     return typeof value === 'number' && isFinite(value);
 }
