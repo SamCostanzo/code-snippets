@@ -1,0 +1,178 @@
+
+/******************************
+JOBS BASE - Change as needed when using this jobs system
+*******************************/
+.new-job-single-container {
+	padding: 100px 10px 200px 10px;
+}
+.jobs-list-heading {
+  font-size: var(--fs-card-heading) !important;
+  color: var(--clr-saranac-red);
+  font-weight: 400;
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.grey-underline {
+	  color: #0a0a0a;
+    padding: 0 0 2px;
+    font-size: 20px;
+		position: relative;
+		display: inline;
+}
+.grey-underline::after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	border-bottom: 2px solid #e4e4e4;
+	content: "";
+}
+.new-job-single-inner-container {
+	margin-bottom: 2em;
+}
+.new-job-single-inner-container h2 {
+	color: #0a0a0a !important;
+	font-size: 1.3rem;
+	padding: 7px 0px;
+}
+.new-job-single-logo-flex-container {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.new-job-single-logo-flex-left {
+	padding: 0px 10px;
+}
+.new-job-single-description-container {
+	padding: 7px 0px;
+}
+.new-job-single-inner-container ul {
+	padding: 7px 0px;
+}
+.single-jobs-template-top-hero-section {
+	height: 25rem;
+	/* background-image: url('https://dev.saranac.com/wp-content/uploads/2022/11/uc-front-gate.jpg'); */
+  background-image: url('/wp-content/uploads/2022/11/uc-front-gate.jpg');
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+	position: relative;
+}
+.overlay-single-jobs-hero {
+	background-color: #0a0a0a;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	opacity: .35;
+}
+.single-jobs-template-top-hero-section h1 {
+	color: #fff;
+	font-family: 'volkhov';
+	font-size: 48px;
+	z-index: 2;
+}
+#gfield_description_16_21 {
+	margin-bottom: 15px;
+}
+.single-job-red-notice, 
+#gfield_description_2_21 {
+	color: red;
+}
+#gfield_description_2_21 {
+  font-size: 18px;
+  line-height: 27px;
+}
+#gform_submit_button_2,
+#gform_submit_button_1,
+#gform_submit_button_4 {
+  background-color: var(--clr-saranac-red);
+  color: var(--clr-white);
+  border-radius: 0;
+  font-weight: 400;
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+  border: none;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.new-job-posting-single-block {
+	display: flex;
+	flex-direction: column;
+/* 	border: 1px solid red; */
+	margin-bottom: 1em;
+	padding: 20px 10px 40px 10px;
+	justify-content: center;
+	background-color: #f0f0f0;
+}
+.new-job-posting-single-block-left {
+	margin-bottom: 10px;
+}
+.new-job-posting-single-block-left h5 {
+  font-family: var(--ff-heading);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.new-job-posting-single-block-right a {
+	 padding: 15px 100px;
+   background: #f00;
+   color: #fff;
+   text-transform: uppercase;
+}
+.new-job-posting-single-block-right a:hover {
+	 padding: 15px 100px;
+   background: #d01418;
+   color: #fff;
+   text-transform: uppercase;
+}
+.new-job-posting-single-block-left h5 {
+	font-weight: 400;
+}
+
+/******************************
+JOBS DESKTOP
+*******************************/
+@media(min-width: 1024px){
+	.new-job-postings-list-container {
+/* 		width: 75%; */
+	}
+	.new-job-posting-single-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 0px 20px 0px 30px;
+ }
+	.new-job-posting-single-block-left {
+		padding: 20px 0px 0px 0px;
+	}
+	.new-job-posting-single-block-right {
+		display: flex;
+		align-items: center
+	}
+	.new-job-single-container {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 100px 10px 200px 10px;
+	}
+	.new-job-single-logo-flex-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.new-job-single-saranac-logo-container img {
+		width: 350px;
+		margin-right: 70px;
+	}
+	.new-job-single-logo-flex-left {
+		padding: 0px;
+	}
+}
