@@ -22,8 +22,8 @@ add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
 function prefix_disable_gutenberg($current_status, $post_type){
     // List post types here
     if(
-		$post_type === 'product' ||
-	    $post_type === 'page' ||
+	$post_type === 'product' ||
+	$post_type === 'page' ||
         $post_type === 'brew' ||
         $post_type === 'promo-cards' ||
         $post_type === 'slides'
