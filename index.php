@@ -151,7 +151,41 @@ add_action('wp_before_admin_bar_render', 'custom_admin_bar_links');
 
 
 
+<?php // WP Query Loop
 
+$args = array(
+	'post_type' => 'grave',
+	'post_status' => 'publish',
+	'orderby' => 'title',
+	'order'   => 'ASC',
+	'posts_per_page' => 10, 
+	's' => $search_text,
+	'paged' => $paged,
+);
+
+$graves_query = new WP_Query( $args );
+
+
+
+	
+if ( $graves_query->have_posts() ) : 
+    while ( $graves_query->have_posts() ) : $graves_query->the_post(); ?>
+    
+    <?php
+	$first_name = get_field('first_name');
+	$last_name = get_field('last_name');
+    ?>
+
+
+    <h4><?= $first_name . ' ' . $last_name; ?></h4>
+	
+
+    
+	<?php wp_reset_postdata(); ?>
+    <?php endwhile; ?>
+<?php else : ?>
+    <h2>No Graves Found!</h2>
+<?php endif; ?>
 
 
 
