@@ -56,3 +56,16 @@ function custom_admin_bar_links() {
     }
 }
 add_action('wp_before_admin_bar_render', 'custom_admin_bar_links');
+
+// Display current template in admin bar
+add_action('admin_bar_menu', 'show_template_in_admin_bar', 100);
+function show_template_in_admin_bar($wp_admin_bar) {
+    if (is_admin()) {
+        return;
+    }
+    global $template;
+    $wp_admin_bar->add_node(array(
+        'id'    => 'current_template',
+        'title' => 'Template: ' . basename($template),
+    ));
+}
